@@ -1,4 +1,6 @@
+#import "ChessClocksAppDelegate.h"
 #import "ChessClocksViewController.h"
+#import "NewGameViewController.h"
 #import "PlayerClock.h"
 
 @interface ChessClocksViewController()
@@ -7,6 +9,8 @@
 @property (nonatomic, retain) PlayerClock *playerClockTwo;
 @property (nonatomic, retain) PlayerClock *currentPlayerClock;
 
+- (void)showPauseGameActionSheet;
+- (void)showNewGameView;
 - (void)startClocks;
 - (void)stopClocks;
 
@@ -19,13 +23,39 @@
 @synthesize playerOneTimeLabel, playerTwoTimeLabel;
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-  if (buttonIndex == actionSheet.cancelButtonIndex)
-    [self startClocks];
+  switch (buttonIndex) {
+    case 0: // New Game
+      [self showNewGameView];
+      break;
+    case 1: // Resume
+      [self startClocks];
+      break;
+  }
+}
+
+- (void) newGameViewController:(id)newGameViewController didStart:(NSTimeInterval)startSeconds {
+  
+}
+
+- (void) newGameViewControllerDidCancel:(id)newGameViewController {
+  [self dismissModalViewControllerAnimated:YES];
+  [self showPauseGameActionSheet];
+}
+
+- (void) showNewGameView {
+  NewGameViewController *newGameController = [[NewGameViewController alloc]initWithNibName:@"NewGameViewController" bundle:nil];
+  newGameController.delegate = self;
+  [self presentModalViewController:newGameController animated:YES];
+  [newGameController release];
 }
 
 - (IBAction) pauseGame:(id) sender {
   [self stopClocks];
-  UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Paused" delegate:self cancelButtonTitle:@"Resume" destructiveButtonTitle:nil otherButtonTitles:nil];
+  [self showPauseGameActionSheet];
+}
+
+- (void) showPauseGameActionSheet {
+  UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Paused" delegate:self cancelButtonTitle:@"Resume" destructiveButtonTitle:nil otherButtonTitles:@"New Game", nil];
   [actionSheet showInView:self.view];
   [actionSheet release];
 }
