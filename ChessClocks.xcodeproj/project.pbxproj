@@ -16,6 +16,7 @@
 		B79D0D75133CC93B007125A4 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79D0D73133CC93B007125A4 /* MainWindow.xib */; };
 		B79D0D78133CC93B007125A4 /* ChessClocksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79D0D77133CC93B007125A4 /* ChessClocksViewController.m */; };
 		B79D0D7B133CC93B007125A4 /* ChessClocksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79D0D79133CC93B007125A4 /* ChessClocksViewController.xib */; };
+		B79D0D83133CCF7E007125A4 /* PlayerClock.m in Sources */ = {isa = PBXBuildFile; fileRef = B79D0D82133CCF7E007125A4 /* PlayerClock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +24,18 @@
 		B79D0D61133CC93B007125A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B79D0D63133CC93B007125A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B79D0D65133CC93B007125A4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B79D0D69133CC93B007125A4 /* ChessClocks-Info.plist */ = {isa = PBXFileReference; path = "ChessClocks-Info.plist"; sourceTree = "<group>"; };
+		B79D0D69133CC93B007125A4 /* ChessClocks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChessClocks-Info.plist"; sourceTree = "<group>"; };
 		B79D0D6B133CC93B007125A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B79D0D6D133CC93B007125A4 /* ChessClocks-Prefix.pch */ = {isa = PBXFileReference; path = "ChessClocks-Prefix.pch"; sourceTree = "<group>"; };
+		B79D0D6D133CC93B007125A4 /* ChessClocks-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChessClocks-Prefix.pch"; sourceTree = "<group>"; };
 		B79D0D6E133CC93B007125A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B79D0D70133CC93B007125A4 /* ChessClocksAppDelegate.h */ = {isa = PBXFileReference; path = ChessClocksAppDelegate.h; sourceTree = "<group>"; };
+		B79D0D70133CC93B007125A4 /* ChessClocksAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChessClocksAppDelegate.h; sourceTree = "<group>"; };
 		B79D0D71133CC93B007125A4 /* ChessClocksAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChessClocksAppDelegate.m; sourceTree = "<group>"; };
 		B79D0D74133CC93B007125A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		B79D0D76133CC93B007125A4 /* ChessClocksViewController.h */ = {isa = PBXFileReference; path = ChessClocksViewController.h; sourceTree = "<group>"; };
+		B79D0D76133CC93B007125A4 /* ChessClocksViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChessClocksViewController.h; sourceTree = "<group>"; };
 		B79D0D77133CC93B007125A4 /* ChessClocksViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChessClocksViewController.m; sourceTree = "<group>"; };
 		B79D0D7A133CC93B007125A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ChessClocksViewController.xib; sourceTree = "<group>"; };
+		B79D0D81133CCF7E007125A4 /* PlayerClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerClock.h; sourceTree = "<group>"; };
+		B79D0D82133CCF7E007125A4 /* PlayerClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerClock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				B79D0D76133CC93B007125A4 /* ChessClocksViewController.h */,
 				B79D0D77133CC93B007125A4 /* ChessClocksViewController.m */,
 				B79D0D79133CC93B007125A4 /* ChessClocksViewController.xib */,
+				B79D0D81133CCF7E007125A4 /* PlayerClock.h */,
+				B79D0D82133CCF7E007125A4 /* PlayerClock.m */,
 				B79D0D68133CC93B007125A4 /* Supporting Files */,
 			);
 			path = ChessClocks;
@@ -167,6 +172,7 @@
 				B79D0D6F133CC93B007125A4 /* main.m in Sources */,
 				B79D0D72133CC93B007125A4 /* ChessClocksAppDelegate.m in Sources */,
 				B79D0D78133CC93B007125A4 /* ChessClocksViewController.m in Sources */,
+				B79D0D83133CCF7E007125A4 /* PlayerClock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

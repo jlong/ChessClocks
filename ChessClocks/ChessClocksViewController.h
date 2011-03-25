@@ -1,15 +1,13 @@
-//
-//  ChessClocksViewController.h
-//  ChessClocks
-//
-//  Created by Adam Williams on 3/25/11.
-//  Copyright 2011 Adaloor, Inc. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
 @interface ChessClocksViewController : UIViewController {
     
 }
+
+@property (nonatomic, retain) IBOutlet UILabel *playerOneTimeLabel;
+@property (nonatomic, retain) IBOutlet UILabel *playerTwoTimeLabel;
+
+- (void) toggleCurrentPlayerClock;
+- (void) startGameWithTimeInterval:(NSTimeInterval) seconds;
 
 @end
