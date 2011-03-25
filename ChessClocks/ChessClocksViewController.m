@@ -8,6 +8,7 @@
 @property (nonatomic, retain) PlayerClock *currentPlayerClock;
 
 - (void)startClocks;
+- (void)stopClocks;
 
 @end
 
@@ -16,6 +17,18 @@
 
 @synthesize playerClockOne, playerClockTwo, currentPlayerClock;
 @synthesize playerOneTimeLabel, playerTwoTimeLabel;
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+  if (buttonIndex == actionSheet.cancelButtonIndex)
+    [self startClocks];
+}
+
+- (IBAction) pauseGame:(id) sender {
+  [self stopClocks];
+  UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Paused" delegate:self cancelButtonTitle:@"Resume" destructiveButtonTitle:nil otherButtonTitles:nil];
+  [actionSheet showInView:self.view];
+  [actionSheet release];
+}
 
 - (void) startGameWithTimeInterval:(NSTimeInterval) seconds {
   self.playerClockOne = [PlayerClock clockWithSeconds:seconds];
@@ -40,6 +53,10 @@
   playerOneTimeLabel.text = playerClockOne.remainingTimeAsString;
   playerTwoTimeLabel.text = playerClockTwo.remainingTimeAsString;
   [currentPlayerClock startCountdown];
+}
+
+- (void)stopClocks {
+  [currentPlayerClock stopCountdown];
 }
 
 - (void) toggleCurrentPlayerClock {
