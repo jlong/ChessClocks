@@ -27,7 +27,7 @@
 }
 
 - (void) startCountdown {
-  self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(decrement) userInfo:nil repeats:YES];
+  self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(tick) userInfo:nil repeats:YES];
 }
 
 - (void) stopCountdown {
@@ -37,8 +37,11 @@
   }
 }
 
-- (void) decrement {
-  self.remainingSeconds = remainingSeconds - 1.0;
+- (void) tick {
+  if (remainingSeconds < 1.0)
+    [self stopCountdown];
+  else
+    self.remainingSeconds = remainingSeconds - 1.0;
 }
 
 - (void) dealloc {
