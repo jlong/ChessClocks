@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B73DF0321361F3C90060071E /* TimePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B73DF0311361F3C90060071E /* TimePickerController.m */; };
+		B73DF03613620D930060071E /* ClockTime.m in Sources */ = {isa = PBXBuildFile; fileRef = B73DF03513620D930060071E /* ClockTime.m */; };
 		B79D0D62133CC93B007125A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79D0D61133CC93B007125A4 /* UIKit.framework */; };
 		B79D0D64133CC93B007125A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79D0D63133CC93B007125A4 /* Foundation.framework */; };
 		B79D0D66133CC93B007125A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79D0D65133CC93B007125A4 /* CoreGraphics.framework */; };
@@ -22,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B73DF0301361F3C80060071E /* TimePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimePickerController.h; sourceTree = "<group>"; };
+		B73DF0311361F3C90060071E /* TimePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimePickerController.m; sourceTree = "<group>"; };
+		B73DF03413620D930060071E /* ClockTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockTime.h; sourceTree = "<group>"; };
+		B73DF03513620D930060071E /* ClockTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockTime.m; sourceTree = "<group>"; };
 		B79D0D5D133CC93B007125A4 /* ChessClocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChessClocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79D0D61133CC93B007125A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B79D0D63133CC93B007125A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -41,7 +47,6 @@
 		B79D0D89133D0076007125A4 /* NewGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewGameViewController.h; sourceTree = "<group>"; };
 		B79D0D8A133D0076007125A4 /* NewGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewGameViewController.m; sourceTree = "<group>"; };
 		B79D0D8B133D0076007125A4 /* NewGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewGameViewController.xib; sourceTree = "<group>"; };
-		B79D0D8E133D0EE5007125A4 /* NewGameViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewGameViewControllerDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +105,10 @@
 				B79D0D81133CCF7E007125A4 /* PlayerClock.h */,
 				B79D0D82133CCF7E007125A4 /* PlayerClock.m */,
 				B79D0D68133CC93B007125A4 /* Supporting Files */,
-				B79D0D8E133D0EE5007125A4 /* NewGameViewControllerDelegate.h */,
+				B73DF0301361F3C80060071E /* TimePickerController.h */,
+				B73DF0311361F3C90060071E /* TimePickerController.m */,
+				B73DF03413620D930060071E /* ClockTime.h */,
+				B73DF03513620D930060071E /* ClockTime.m */,
 			);
 			path = ChessClocks;
 			sourceTree = "<group>";
@@ -185,6 +193,8 @@
 				B79D0D78133CC93B007125A4 /* ChessClocksViewController.m in Sources */,
 				B79D0D83133CCF7E007125A4 /* PlayerClock.m in Sources */,
 				B79D0D8C133D0076007125A4 /* NewGameViewController.m in Sources */,
+				B73DF0321361F3C90060071E /* TimePickerController.m in Sources */,
+				B73DF03613620D930060071E /* ClockTime.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +307,7 @@
 				B79D0D80133CC93B007125A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

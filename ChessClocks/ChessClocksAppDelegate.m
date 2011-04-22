@@ -13,7 +13,7 @@
 {
   self.window.rootViewController = self.viewController;
   [self.window makeKeyAndVisible];
-  [self.viewController startGameWithTimeInterval:5];
+  [self.viewController startGameWithTime:[ClockTime timeWithMinutes:5]];
   return YES;
 }
 

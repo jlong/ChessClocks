@@ -1,6 +1,7 @@
 #import "ChessClocksAppDelegate.h"
 #import "ChessClocksViewController.h"
 #import "NewGameViewController.h"
+#import "ClockTime.h"
 #import "PlayerClock.h"
 
 @interface ChessClocksViewController()
@@ -33,7 +34,7 @@
   }
 }
 
-- (void) newGameViewController:(id)newGameViewController didStart:(NSTimeInterval)startSeconds {
+- (void) newGameViewController:(id)newGameViewController didStart:(ClockTime *)clockTime {
   
 }
 
@@ -60,11 +61,11 @@
   [actionSheet release];
 }
 
-- (void) startGameWithTimeInterval:(NSTimeInterval) seconds {
-  self.playerClockOne = [PlayerClock clockWithSeconds:seconds];
+- (void) startGameWithTime:(ClockTime *) time {
+  self.playerClockOne = [PlayerClock clockWithTime:time];
   [playerClockOne addObserver:self forKeyPath:@"remainingSeconds" options:0 context:nil];
   
-  self.playerClockTwo = [PlayerClock clockWithSeconds:seconds];
+  self.playerClockTwo = [PlayerClock clockWithTime:time];
   [playerClockTwo addObserver:self forKeyPath:@"remainingSeconds" options:0 context:nil];
 
   self.currentPlayerClock = playerClockOne;

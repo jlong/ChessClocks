@@ -1,4 +1,5 @@
 #import <UIKit/UIKit.h>
+#import "ClockTime.h"
 #import "NewGameViewController.h"
 
 @interface ChessClocksViewController : UIViewController <UIActionSheetDelegate, NewGameViewControllerDelegate> {
@@ -11,6 +12,6 @@
 - (IBAction) pauseGame:(id) sender;
 
 - (void) toggleCurrentPlayerClock;
-- (void) startGameWithTimeInterval:(NSTimeInterval) seconds;
+- (void) startGameWithTime:(ClockTime *) time;
 
 @end

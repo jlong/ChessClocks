@@ -13,10 +13,10 @@
 
 @synthesize startSeconds, remainingSeconds, timer;
 
-+ (PlayerClock *) clockWithSeconds:(NSTimeInterval) startSeconds {
++ (PlayerClock *) clockWithTime:(ClockTime *) time {
   PlayerClock *clock = [[PlayerClock alloc] init];
-  clock.startSeconds = startSeconds;
-  clock.remainingSeconds = startSeconds;
+  clock.startSeconds = time.totalSeconds;
+  clock.remainingSeconds = time.totalSeconds;
   return [clock autorelease];
 }
 
