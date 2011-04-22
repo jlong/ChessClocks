@@ -62,15 +62,19 @@
   [actionSheet release];
 }
 
+- (void) setCurrentPlayerClock:(PlayerClock *)clock {
+  if (currentPlayerClock != nil) {
+    [currentPlayerClock removeObserver:self forKeyPath:@"remainingSeconds"];
+    [currentPlayerClock release];
+  }
+  currentPlayerClock = [clock retain];
+  [currentPlayerClock addObserver:self forKeyPath:@"remainingSeconds" options:0 context:nil];
+}
+
 - (void) startGameWithTime:(ClockTime *) time {
   self.playerClockOne = [PlayerClock clockWithTime:time];
-  [playerClockOne addObserver:self forKeyPath:@"remainingSeconds" options:0 context:nil];
-  
   self.playerClockTwo = [PlayerClock clockWithTime:time];
-  [playerClockTwo addObserver:self forKeyPath:@"remainingSeconds" options:0 context:nil];
-
   self.currentPlayerClock = playerClockOne;
-
   [self startClocks];
 }
 
@@ -94,9 +98,9 @@
 - (void) toggleCurrentPlayerClock {
   [currentPlayerClock stopCountdown];
   if (playerClockOne == currentPlayerClock)
-    currentPlayerClock = playerClockTwo;
+    self.currentPlayerClock = playerClockTwo;
   else
-    currentPlayerClock = playerClockOne;
+    self.currentPlayerClock = playerClockOne;
   [currentPlayerClock startCountdown];
 }
 
