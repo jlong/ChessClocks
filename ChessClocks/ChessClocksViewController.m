@@ -35,7 +35,8 @@
 }
 
 - (void) newGameViewController:(id)newGameViewController didStart:(ClockTime *)clockTime {
-  
+  [self dismissModalViewControllerAnimated:YES];
+  [self startGameWithTime:clockTime];
 }
 
 - (void) newGameViewControllerDidCancel:(id)newGameViewController {

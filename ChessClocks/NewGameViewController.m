@@ -5,9 +5,6 @@
 
 @property (nonatomic, retain, readwrite) ClockTime *clockTime;
 
-- (IBAction) cancel:(id)sender;
-- (IBAction) startNewGame:(id)sender;
-
 @end
 
 @implementation NewGameViewController
