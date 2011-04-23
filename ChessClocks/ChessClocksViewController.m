@@ -11,6 +11,7 @@
 
 - (void)showPauseGameActionSheet;
 - (void)showNewGameView;
+- (void)hideNewGameView;
 - (void)startClocks;
 - (void)stopClocks;
 - (void)updateClockDisplay;
@@ -35,14 +36,12 @@
 }
 
 - (void)newGameViewController:(id)newGameViewController didStart:(ClockTime *)clockTime {
-  [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
-  [self dismissModalViewControllerAnimated:YES];
+  [self hideNewGameView];
   [self startGameWithTime:clockTime];
 }
 
 - (void)newGameViewControllerDidCancel:(id)newGameViewController {
-  [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
-  [self dismissModalViewControllerAnimated:YES];
+  [self hideNewGameView];
   [self showPauseGameActionSheet];
 }
 
@@ -52,6 +51,11 @@
   newGameController.delegate = self;
   [self presentModalViewController:newGameController animated:YES];
   [newGameController release];
+}
+
+- (void)hideNewGameView {
+  [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+  [self dismissModalViewControllerAnimated:YES];
 }
 
 - (IBAction)pauseGame:(id) sender {

@@ -3068,9 +3068,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>325281953.37058198</real>
-		<string>{489, 2084}</string>
-		<string>{1144, 0}</string>
+		<real>325282255.35681599</real>
+		<string>{849, 1911}</string>
+		<string>{1045, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4937,7 +4937,7 @@
 				<integer>423</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>325281951.642941</real>
+			<real>325282245.75486302</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -4948,7 +4948,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 4:05 PM</string>
+		<string>Today at 4:10 PM</string>
 		<integer>106</integer>
 		<dict>
 			<key>$class</key>
@@ -6484,9 +6484,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>325281953.37145102</real>
-		<string>{489, 2084}</string>
-		<string>{1144, 0}</string>
+		<real>325282255.35762298</real>
+		<string>{849, 1911}</string>
+		<string>{1045, 0}</string>
 		<string>-newGameViewController:didStart:</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
 		<dict>
