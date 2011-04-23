@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B697A86C13636112001DB713 /* clock-background-active.png in Resources */ = {isa = PBXBuildFile; fileRef = B697A86413636112001DB713 /* clock-background-active.png */; };
+		B697A86D13636112001DB713 /* clock-background-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B697A86513636112001DB713 /* clock-background-active@2x.png */; };
+		B697A86E13636112001DB713 /* clock-background.png in Resources */ = {isa = PBXBuildFile; fileRef = B697A86613636112001DB713 /* clock-background.png */; };
+		B697A86F13636112001DB713 /* clock-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B697A86713636112001DB713 /* clock-background@2x.png */; };
+		B697A87013636112001DB713 /* glare.png in Resources */ = {isa = PBXBuildFile; fileRef = B697A86813636112001DB713 /* glare.png */; };
+		B697A87113636112001DB713 /* glare@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B697A86913636112001DB713 /* glare@2x.png */; };
+		B697A87213636112001DB713 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = B697A86A13636112001DB713 /* pause.png */; };
+		B697A87313636112001DB713 /* pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B697A86B13636112001DB713 /* pause@2x.png */; };
 		B73DF0321361F3C90060071E /* TimePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B73DF0311361F3C90060071E /* TimePickerController.m */; };
 		B73DF03613620D930060071E /* ClockTime.m in Sources */ = {isa = PBXBuildFile; fileRef = B73DF03513620D930060071E /* ClockTime.m */; };
 		B79D0D62133CC93B007125A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79D0D61133CC93B007125A4 /* UIKit.framework */; };
@@ -24,6 +32,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B697A86413636112001DB713 /* clock-background-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-background-active.png"; sourceTree = "<group>"; };
+		B697A86513636112001DB713 /* clock-background-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-background-active@2x.png"; sourceTree = "<group>"; };
+		B697A86613636112001DB713 /* clock-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-background.png"; sourceTree = "<group>"; };
+		B697A86713636112001DB713 /* clock-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-background@2x.png"; sourceTree = "<group>"; };
+		B697A86813636112001DB713 /* glare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glare.png; sourceTree = "<group>"; };
+		B697A86913636112001DB713 /* glare@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glare@2x.png"; sourceTree = "<group>"; };
+		B697A86A13636112001DB713 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		B697A86B13636112001DB713 /* pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause@2x.png"; sourceTree = "<group>"; };
 		B73DF0301361F3C80060071E /* TimePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimePickerController.h; sourceTree = "<group>"; };
 		B73DF0311361F3C90060071E /* TimePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimePickerController.m; sourceTree = "<group>"; };
 		B73DF03413620D930060071E /* ClockTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockTime.h; sourceTree = "<group>"; };
@@ -97,6 +113,14 @@
 				B79D0D71133CC93B007125A4 /* ChessClocksAppDelegate.m */,
 				B79D0D73133CC93B007125A4 /* MainWindow.xib */,
 				B79D0D76133CC93B007125A4 /* ChessClocksViewController.h */,
+				B697A86413636112001DB713 /* clock-background-active.png */,
+				B697A86513636112001DB713 /* clock-background-active@2x.png */,
+				B697A86613636112001DB713 /* clock-background.png */,
+				B697A86713636112001DB713 /* clock-background@2x.png */,
+				B697A86813636112001DB713 /* glare.png */,
+				B697A86913636112001DB713 /* glare@2x.png */,
+				B697A86A13636112001DB713 /* pause.png */,
+				B697A86B13636112001DB713 /* pause@2x.png */,
 				B79D0D77133CC93B007125A4 /* ChessClocksViewController.m */,
 				B79D0D79133CC93B007125A4 /* ChessClocksViewController.xib */,
 				B79D0D89133D0076007125A4 /* NewGameViewController.h */,
@@ -178,6 +202,14 @@
 				B79D0D75133CC93B007125A4 /* MainWindow.xib in Resources */,
 				B79D0D7B133CC93B007125A4 /* ChessClocksViewController.xib in Resources */,
 				B79D0D8D133D0076007125A4 /* NewGameViewController.xib in Resources */,
+				B697A86C13636112001DB713 /* clock-background-active.png in Resources */,
+				B697A86D13636112001DB713 /* clock-background-active@2x.png in Resources */,
+				B697A86E13636112001DB713 /* clock-background.png in Resources */,
+				B697A86F13636112001DB713 /* clock-background@2x.png in Resources */,
+				B697A87013636112001DB713 /* glare.png in Resources */,
+				B697A87113636112001DB713 /* glare@2x.png in Resources */,
+				B697A87213636112001DB713 /* pause.png in Resources */,
+				B697A87313636112001DB713 /* pause@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
