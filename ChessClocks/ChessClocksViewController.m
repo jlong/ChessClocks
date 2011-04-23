@@ -24,6 +24,22 @@
 @synthesize playerClockOne, playerClockTwo, currentPlayerClock;
 @synthesize playerOneTimeLabel, playerTwoTimeLabel;
 
+
+//
+// Pause Game
+//
+
+- (IBAction)pauseGame:(id) sender {
+  [self stopClocks];
+  [self showPauseGameActionSheet];
+}
+
+- (void)showPauseGameActionSheet {
+  UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Paused" delegate:self cancelButtonTitle:@"Resume" destructiveButtonTitle:nil otherButtonTitles:@"New Game", nil];
+  [actionSheet showInView:self.view];
+  [actionSheet release];
+}
+
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
   switch (buttonIndex) {
     case 0: // New Game
@@ -35,15 +51,10 @@
   }
 }
 
-- (void)newGameViewController:(id)newGameViewController didStart:(ClockTime *)clockTime {
-  [self hideNewGameView];
-  [self startGameWithTime:clockTime];
-}
 
-- (void)newGameViewControllerDidCancel:(id)newGameViewController {
-  [self hideNewGameView];
-  [self showPauseGameActionSheet];
-}
+//
+// New Game
+//
 
 - (void)showNewGameView {
   [[UIApplication sharedApplication]setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
@@ -58,16 +69,21 @@
   [self dismissModalViewControllerAnimated:YES];
 }
 
-- (IBAction)pauseGame:(id) sender {
-  [self stopClocks];
+- (void)newGameViewController:(id)newGameViewController didStart:(ClockTime *)clockTime {
+  [self hideNewGameView];
+  [self startGameWithTime:clockTime];
+}
+
+- (void)newGameViewControllerDidCancel:(id)newGameViewController {
+  [self hideNewGameView];
   [self showPauseGameActionSheet];
 }
 
-- (void)showPauseGameActionSheet {
-  UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Paused" delegate:self cancelButtonTitle:@"Resume" destructiveButtonTitle:nil otherButtonTitles:@"New Game", nil];
-  [actionSheet showInView:self.view];
-  [actionSheet release];
-}
+
+
+//
+// Game
+//
 
 - (void)setCurrentPlayerClock:(PlayerClock *)clock {
   static NSString *keyPath = @"clockTime";
