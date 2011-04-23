@@ -23,6 +23,7 @@
 
 @synthesize playerClockOne, playerClockTwo, currentPlayerClock;
 @synthesize playerOneTimeLabel, playerTwoTimeLabel;
+@synthesize playerOneBackgroundImage, playerTwoBackgroundImage;
 
 
 //
@@ -87,11 +88,17 @@
 
 - (void)setCurrentPlayerClock:(PlayerClock *)clock {
   static NSString *keyPath = @"clockTime";
+  
   if (currentPlayerClock != nil) {
     [currentPlayerClock removeObserver:self forKeyPath:keyPath];
     [currentPlayerClock release];
   }
+  
   currentPlayerClock = [clock retain];
+  
+  self.playerOneBackgroundImage.highlighted = (playerClockOne == currentPlayerClock);
+  self.playerTwoBackgroundImage.highlighted = (playerClockTwo == currentPlayerClock);
+
   [currentPlayerClock addObserver:self forKeyPath:keyPath options:0 context:nil];
 }
 
@@ -122,10 +129,11 @@
 
 - (void) toggleCurrentPlayerClock {
   [currentPlayerClock stopCountdown];
-  if (playerClockOne == currentPlayerClock)
+  if (playerClockOne == currentPlayerClock) {
     self.currentPlayerClock = playerClockTwo;
-  else
+  } else {
     self.currentPlayerClock = playerClockOne;
+  }
   [currentPlayerClock startCountdown];
 }
 
