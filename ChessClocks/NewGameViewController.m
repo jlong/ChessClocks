@@ -44,7 +44,7 @@
                                    reuseIdentifier:CellIdentifier] autorelease];
 	}
   cell.textLabel.text = @"Game Length";
-  cell.detailTextLabel.text = [self.clockTime string];
+  cell.detailTextLabel.text = [self.clockTime stringLabeled];
 
   return cell;
 }

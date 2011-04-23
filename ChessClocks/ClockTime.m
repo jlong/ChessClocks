@@ -31,6 +31,10 @@
 }
 
 - (NSString *) string {
+  return [NSString stringWithFormat:@"%02u:%02u", minutes, seconds];
+}
+
+- (NSString *) stringLabeled {
   return [NSString stringWithFormat:@"%u:%02u min", minutes, seconds];
 }
 

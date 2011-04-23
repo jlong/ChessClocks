@@ -14,6 +14,7 @@
 - (BOOL) isExpired;
 
 - (NSString *) string;
+- (NSString *) stringLabeled;
 
 - (id) timeDecremented;
 
