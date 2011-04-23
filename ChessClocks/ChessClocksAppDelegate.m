@@ -11,9 +11,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [application setStatusBarHidden:YES];
+  
   self.window.rootViewController = self.viewController;
+  
   [self.window makeKeyAndVisible];
+  
   [self.viewController startGameWithTime:[ClockTime timeWithMinutes:5]];
+  
   return YES;
 }
 

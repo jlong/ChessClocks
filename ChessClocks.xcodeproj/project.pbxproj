@@ -79,6 +79,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B697A87513636746001DB713 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B697A86413636112001DB713 /* clock-background-active.png */,
+				B697A86513636112001DB713 /* clock-background-active@2x.png */,
+				B697A86613636112001DB713 /* clock-background.png */,
+				B697A86713636112001DB713 /* clock-background@2x.png */,
+				B697A86813636112001DB713 /* glare.png */,
+				B697A86913636112001DB713 /* glare@2x.png */,
+				B697A86A13636112001DB713 /* pause.png */,
+				B697A86B13636112001DB713 /* pause@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		B79D0D52133CC93B007125A4 = {
 			isa = PBXGroup;
 			children = (
@@ -109,18 +124,12 @@
 		B79D0D67133CC93B007125A4 /* ChessClocks */ = {
 			isa = PBXGroup;
 			children = (
+				B697A87513636746001DB713 /* Images */,
+				B79D0D68133CC93B007125A4 /* Supporting Files */,
 				B79D0D70133CC93B007125A4 /* ChessClocksAppDelegate.h */,
 				B79D0D71133CC93B007125A4 /* ChessClocksAppDelegate.m */,
 				B79D0D73133CC93B007125A4 /* MainWindow.xib */,
 				B79D0D76133CC93B007125A4 /* ChessClocksViewController.h */,
-				B697A86413636112001DB713 /* clock-background-active.png */,
-				B697A86513636112001DB713 /* clock-background-active@2x.png */,
-				B697A86613636112001DB713 /* clock-background.png */,
-				B697A86713636112001DB713 /* clock-background@2x.png */,
-				B697A86813636112001DB713 /* glare.png */,
-				B697A86913636112001DB713 /* glare@2x.png */,
-				B697A86A13636112001DB713 /* pause.png */,
-				B697A86B13636112001DB713 /* pause@2x.png */,
 				B79D0D77133CC93B007125A4 /* ChessClocksViewController.m */,
 				B79D0D79133CC93B007125A4 /* ChessClocksViewController.xib */,
 				B79D0D89133D0076007125A4 /* NewGameViewController.h */,
@@ -128,7 +137,6 @@
 				B79D0D8B133D0076007125A4 /* NewGameViewController.xib */,
 				B79D0D81133CCF7E007125A4 /* PlayerClock.h */,
 				B79D0D82133CCF7E007125A4 /* PlayerClock.m */,
-				B79D0D68133CC93B007125A4 /* Supporting Files */,
 				B73DF0301361F3C80060071E /* TimePickerController.h */,
 				B73DF0311361F3C90060071E /* TimePickerController.m */,
 				B73DF03413620D930060071E /* ClockTime.h */,

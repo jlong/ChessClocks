@@ -35,16 +35,19 @@
 }
 
 - (void)newGameViewController:(id)newGameViewController didStart:(ClockTime *)clockTime {
+  [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
   [self dismissModalViewControllerAnimated:YES];
   [self startGameWithTime:clockTime];
 }
 
 - (void)newGameViewControllerDidCancel:(id)newGameViewController {
+  [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
   [self dismissModalViewControllerAnimated:YES];
   [self showPauseGameActionSheet];
 }
 
 - (void)showNewGameView {
+  [[UIApplication sharedApplication]setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
   NewGameViewController *newGameController = [[NewGameViewController alloc]initWithNibName:@"NewGameViewController" bundle:nil];
   newGameController.delegate = self;
   [self presentModalViewController:newGameController animated:YES];
