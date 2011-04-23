@@ -1,13 +1,8 @@
-#import <Foundation/Foundation.h>
-#import "ClockTime.h"
-
 @interface PlayerClock : NSObject {
     
 }
 
-@property (nonatomic, readonly) NSTimeInterval startSeconds;
-@property (nonatomic, readonly) NSTimeInterval remainingSeconds;
-@property (nonatomic, readonly) NSString *remainingTimeAsString;
+@property (nonatomic, retain, readonly) ClockTime *clockTime;
 
 + (PlayerClock *) clockWithTime:(ClockTime *) time;
 

@@ -1,7 +1,6 @@
 #import "ChessClocksAppDelegate.h"
 #import "ChessClocksViewController.h"
 #import "NewGameViewController.h"
-#import "ClockTime.h"
 #import "PlayerClock.h"
 
 @interface ChessClocksViewController()
@@ -14,6 +13,7 @@
 - (void)showNewGameView;
 - (void)startClocks;
 - (void)stopClocks;
+- (void)updateClockDisplay;
 
 @end
 
@@ -34,60 +34,62 @@
   }
 }
 
-- (void) newGameViewController:(id)newGameViewController didStart:(ClockTime *)clockTime {
+- (void)newGameViewController:(id)newGameViewController didStart:(ClockTime *)clockTime {
   [self dismissModalViewControllerAnimated:YES];
   [self startGameWithTime:clockTime];
 }
 
-- (void) newGameViewControllerDidCancel:(id)newGameViewController {
+- (void)newGameViewControllerDidCancel:(id)newGameViewController {
   [self dismissModalViewControllerAnimated:YES];
   [self showPauseGameActionSheet];
 }
 
-- (void) showNewGameView {
+- (void)showNewGameView {
   NewGameViewController *newGameController = [[NewGameViewController alloc]initWithNibName:@"NewGameViewController" bundle:nil];
   newGameController.delegate = self;
   [self presentModalViewController:newGameController animated:YES];
   [newGameController release];
 }
 
-- (IBAction) pauseGame:(id) sender {
+- (IBAction)pauseGame:(id) sender {
   [self stopClocks];
   [self showPauseGameActionSheet];
 }
 
-- (void) showPauseGameActionSheet {
+- (void)showPauseGameActionSheet {
   UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Paused" delegate:self cancelButtonTitle:@"Resume" destructiveButtonTitle:nil otherButtonTitles:@"New Game", nil];
   [actionSheet showInView:self.view];
   [actionSheet release];
 }
 
-- (void) setCurrentPlayerClock:(PlayerClock *)clock {
+- (void)setCurrentPlayerClock:(PlayerClock *)clock {
+  static NSString *keyPath = @"clockTime";
   if (currentPlayerClock != nil) {
-    [currentPlayerClock removeObserver:self forKeyPath:@"remainingSeconds"];
+    [currentPlayerClock removeObserver:self forKeyPath:keyPath];
     [currentPlayerClock release];
   }
   currentPlayerClock = [clock retain];
-  [currentPlayerClock addObserver:self forKeyPath:@"remainingSeconds" options:0 context:nil];
+  [currentPlayerClock addObserver:self forKeyPath:keyPath options:0 context:nil];
 }
 
-- (void) startGameWithTime:(ClockTime *) time {
+- (void)startGameWithTime:(ClockTime *) time {
   self.playerClockOne = [PlayerClock clockWithTime:time];
   self.playerClockTwo = [PlayerClock clockWithTime:time];
   self.currentPlayerClock = playerClockOne;
   [self startClocks];
 }
 
+- (void)updateClockDisplay {
+  playerOneTimeLabel.text = playerClockOne.clockTime.string;
+  playerTwoTimeLabel.text = playerClockTwo.clockTime.string;
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-  if (object == playerClockOne)
-    playerOneTimeLabel.text = playerClockOne.remainingTimeAsString;
-  else if (object == playerClockTwo)
-    playerTwoTimeLabel.text = playerClockTwo.remainingTimeAsString;
+  [self updateClockDisplay];
 }
 
 - (void)startClocks {
-  playerOneTimeLabel.text = playerClockOne.remainingTimeAsString;
-  playerTwoTimeLabel.text = playerClockTwo.remainingTimeAsString;
+  [self updateClockDisplay];
   [currentPlayerClock startCountdown];
 }
 

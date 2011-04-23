@@ -1,4 +1,3 @@
-#import "ClockTime.h"
 #import "NewGameViewController.h"
 
 @interface NewGameViewController()

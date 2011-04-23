@@ -1,5 +1,3 @@
-#import <UIKit/UIKit.h>
-#import "ClockTime.h"
 #import "NewGameViewController.h"
 
 @interface ChessClocksViewController : UIViewController <UIActionSheetDelegate, NewGameViewControllerDelegate> {

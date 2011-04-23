@@ -2,8 +2,7 @@
 
 @interface PlayerClock()
 
-@property (nonatomic, readwrite) NSTimeInterval startSeconds;
-@property (nonatomic, readwrite) NSTimeInterval remainingSeconds;
+@property (nonatomic, retain, readwrite) ClockTime *clockTime;
 @property (nonatomic, retain, readwrite) NSTimer *timer;
 
 @end
@@ -11,19 +10,13 @@
 
 @implementation PlayerClock
 
-@synthesize startSeconds, remainingSeconds, timer;
+@synthesize clockTime;
+@synthesize timer;
 
 + (PlayerClock *) clockWithTime:(ClockTime *) time {
-  PlayerClock *clock = [[PlayerClock alloc] init];
-  clock.startSeconds = time.totalSeconds;
-  clock.remainingSeconds = time.totalSeconds;
-  return [clock autorelease];
-}
-
-- (NSString *)remainingTimeAsString {
-  NSUInteger minute = (int) remainingSeconds / 60;
-  NSUInteger second = remainingSeconds - (minute * 60);
-  return [NSString stringWithFormat:@"%02u:%02u", minute, second];
+  PlayerClock *clock = [[[PlayerClock alloc] init] autorelease];
+  clock.clockTime = time;
+  return clock;
 }
 
 - (void) startCountdown {
@@ -38,10 +31,10 @@
 }
 
 - (void) tick {
-  if (remainingSeconds < 1.0)
+  if ([clockTime isExpired])
     [self stopCountdown];
   else
-    self.remainingSeconds = remainingSeconds - 1.0;
+    self.clockTime = [clockTime timeDecremented];
 }
 
 - (void) dealloc {

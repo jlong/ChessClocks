@@ -1,5 +1,4 @@
 #import "TimePickerController.h"
-#import "ClockTime.h"
 
 @implementation TimePickerController
 

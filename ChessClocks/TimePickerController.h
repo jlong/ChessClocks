@@ -1,6 +1,3 @@
-#import <Foundation/Foundation.h>
-#import "ClockTime.h"
-
 @class TimePickerController;
 
 @protocol TimePickerControllerDelegate <NSObject>

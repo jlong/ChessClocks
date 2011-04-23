@@ -1,6 +1,3 @@
-#import <Foundation/Foundation.h>
-
-
 @interface ClockTime : NSObject {
     
 }
@@ -10,13 +7,18 @@
 @property (nonatomic, readonly) NSUInteger totalSeconds;
 
 + (ClockTime *) timeWithMinutes:(NSUInteger)min;
++ (ClockTime *) timeWithMinutes:(NSUInteger)min seconds:(NSUInteger)sec;
 
-- (id) initWithMinutes:(NSUInteger)minutes seconds:(NSUInteger)seconds;
+- (id) initWithMinutes:(NSUInteger)min seconds:(NSUInteger)sec;
+
+- (BOOL) isExpired;
 
 - (NSString *) string;
 
-- (id) timeWithMinutes:(NSUInteger)minutes;
+- (id) timeDecremented;
 
-- (id) timeWithSeconds:(NSUInteger)minutes;
+- (id) timeWithMinutes:(NSUInteger)min;
+
+- (id) timeWithSeconds:(NSUInteger)sec;
 
 @end

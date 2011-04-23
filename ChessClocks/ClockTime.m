@@ -1,5 +1,3 @@
-#import "ClockTime.h"
-
 @interface ClockTime()
 
 @property (nonatomic, readwrite) NSUInteger minutes;
@@ -11,8 +9,12 @@
 
 @synthesize minutes, seconds;
 
-+ (ClockTime *) timeWithMinutes:(NSUInteger)min {
++ (id) timeWithMinutes:(NSUInteger)min {
   return [[[self alloc] initWithMinutes:min seconds:0] autorelease];
+}
+
++ (id) timeWithMinutes:(NSUInteger)min seconds:(NSUInteger)sec {
+  return [[[self alloc] initWithMinutes:min seconds:sec] autorelease];
 }
 
 - (id) initWithMinutes:(NSUInteger)min seconds:(NSUInteger)sec {
@@ -24,16 +26,32 @@
   return self;
 }
 
+- (BOOL) isExpired {
+  return self.totalSeconds < 1;
+}
+
 - (NSString *) string {
   return [NSString stringWithFormat:@"%u:%02u min", minutes, seconds];
 }
 
+- (id) timeDecremented {
+  NSUInteger min = minutes;
+  NSUInteger sec = seconds;
+  if (sec == 0 && min > 0) {
+    min = min - 1;
+    sec = 59;
+  } else {
+    sec = sec - 1;
+  }
+  return [ClockTime timeWithMinutes:min seconds:sec];
+}
+
 - (id) timeWithMinutes:(NSUInteger)min {
-  return [[[ClockTime alloc] initWithMinutes:min seconds:seconds] autorelease];
+  return [ClockTime timeWithMinutes:min seconds:seconds];
 }
 
 - (id) timeWithSeconds:(NSUInteger)sec {
-  return [[[ClockTime alloc] initWithMinutes:minutes seconds:sec] autorelease];
+  return [ClockTime timeWithMinutes:minutes seconds:sec];
 }
 
 - (NSUInteger) totalSeconds {

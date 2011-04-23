@@ -1,5 +1,3 @@
-#import <UIKit/UIKit.h>
-#import "ClockTime.h"
 #import "TimePickerController.h"
 
 @class NewGameViewController;
