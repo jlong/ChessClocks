@@ -1,5 +1,3 @@
-#import <UIKit/UIKit.h>
-
 @class ChessClocksViewController;
 
 @interface ChessClocksAppDelegate : NSObject <UIApplicationDelegate> {
