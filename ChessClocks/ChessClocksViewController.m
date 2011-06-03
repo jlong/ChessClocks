@@ -136,7 +136,7 @@
 {
   self.playerClockOne = [PlayerClock clockWithTime:time];
   self.playerClockTwo = [PlayerClock clockWithTime:time];
-  self.currentPlayerClock = playerClockOne;
+  
   [self updateClockDisplay];
 
   [self showOverlayMessage: @"Tap anywhere to start.\nTap again to switch clocks."];
@@ -180,6 +180,7 @@
     [self toggleCurrentPlayerClock];
   } else {
     [self hideOverlayMessage];
+    self.currentPlayerClock = playerClockOne;
     [self startClocks];
   }
 }
