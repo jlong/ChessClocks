@@ -17,6 +17,9 @@
 		B697A87313636112001DB713 /* pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B697A86B13636112001DB713 /* pause@2x.png */; };
 		B73DF0321361F3C90060071E /* TimePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B73DF0311361F3C90060071E /* TimePickerController.m */; };
 		B73DF03613620D930060071E /* ClockTime.m in Sources */ = {isa = PBXBuildFile; fileRef = B73DF03513620D930060071E /* ClockTime.m */; };
+		B7888666139917A200CEB427 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7888665139917A200CEB427 /* Entitlements.plist */; };
+		B788866A13991BFA00CEB427 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B788866813991BFA00CEB427 /* WelcomeViewController.m */; };
+		B788866B13991BFA00CEB427 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B788866913991BFA00CEB427 /* WelcomeViewController.xib */; };
 		B79D0D62133CC93B007125A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79D0D61133CC93B007125A4 /* UIKit.framework */; };
 		B79D0D64133CC93B007125A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79D0D63133CC93B007125A4 /* Foundation.framework */; };
 		B79D0D66133CC93B007125A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79D0D65133CC93B007125A4 /* CoreGraphics.framework */; };
@@ -44,6 +47,10 @@
 		B73DF0311361F3C90060071E /* TimePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimePickerController.m; sourceTree = "<group>"; };
 		B73DF03413620D930060071E /* ClockTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockTime.h; sourceTree = "<group>"; };
 		B73DF03513620D930060071E /* ClockTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockTime.m; sourceTree = "<group>"; };
+		B7888665139917A200CEB427 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		B788866713991BFA00CEB427 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		B788866813991BFA00CEB427 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		B788866913991BFA00CEB427 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		B79D0D5D133CC93B007125A4 /* ChessClocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChessClocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79D0D61133CC93B007125A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B79D0D63133CC93B007125A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -141,6 +148,10 @@
 				B73DF0311361F3C90060071E /* TimePickerController.m */,
 				B73DF03413620D930060071E /* ClockTime.h */,
 				B73DF03513620D930060071E /* ClockTime.m */,
+				B7888665139917A200CEB427 /* Entitlements.plist */,
+				B788866713991BFA00CEB427 /* WelcomeViewController.h */,
+				B788866813991BFA00CEB427 /* WelcomeViewController.m */,
+				B788866913991BFA00CEB427 /* WelcomeViewController.xib */,
 			);
 			path = ChessClocks;
 			sourceTree = "<group>";
@@ -218,6 +229,8 @@
 				B697A87113636112001DB713 /* glare@2x.png in Resources */,
 				B697A87213636112001DB713 /* pause.png in Resources */,
 				B697A87313636112001DB713 /* pause@2x.png in Resources */,
+				B7888666139917A200CEB427 /* Entitlements.plist in Resources */,
+				B788866B13991BFA00CEB427 /* WelcomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +248,7 @@
 				B79D0D8C133D0076007125A4 /* NewGameViewController.m in Sources */,
 				B73DF0321361F3C90060071E /* TimePickerController.m in Sources */,
 				B73DF03613620D930060071E /* ClockTime.m in Sources */,
+				B788866A13991BFA00CEB427 /* WelcomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +282,39 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B78886621399176100CEB427 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = "Ad Hoc";
+		};
+		B78886631399176100CEB427 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = ChessClocks/Entitlements.plist;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Adam Williams (4PNCLQ3UVZ)";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChessClocks/ChessClocks-Prefix.pch";
+				INFOPLIST_FILE = "ChessClocks/ChessClocks-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "CA4C7B4E-EBA2-4682-9DDD-4D93400C77CC";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Ad Hoc";
+		};
 		B79D0D7C133CC93B007125A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -304,6 +351,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = ChessClocks/Entitlements.plist;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Adam Williams (4PNCLQ3UVZ)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -311,6 +360,7 @@
 				INFOPLIST_FILE = "ChessClocks/ChessClocks-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "CA4C7B4E-EBA2-4682-9DDD-4D93400C77CC";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -319,12 +369,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = ChessClocks/Entitlements.plist;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Adam Williams (4PNCLQ3UVZ)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChessClocks/ChessClocks-Prefix.pch";
 				INFOPLIST_FILE = "ChessClocks/ChessClocks-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "CA4C7B4E-EBA2-4682-9DDD-4D93400C77CC";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -338,6 +391,7 @@
 			buildConfigurations = (
 				B79D0D7C133CC93B007125A4 /* Debug */,
 				B79D0D7D133CC93B007125A4 /* Release */,
+				B78886621399176100CEB427 /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -347,6 +401,7 @@
 			buildConfigurations = (
 				B79D0D7F133CC93B007125A4 /* Debug */,
 				B79D0D80133CC93B007125A4 /* Release */,
+				B78886631399176100CEB427 /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
