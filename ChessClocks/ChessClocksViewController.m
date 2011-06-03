@@ -122,7 +122,9 @@
   self.playerOneBackgroundImage.highlighted = (playerClockOne == currentPlayerClock);
   self.playerTwoBackgroundImage.highlighted = (playerClockTwo == currentPlayerClock);
 
-  [currentPlayerClock addObserver:self forKeyPath:keyPath options:0 context:nil];
+  if (currentPlayerClock) {
+    [currentPlayerClock addObserver:self forKeyPath:keyPath options:0 context:nil];
+  }
 }
 
 - (void)startGame
@@ -133,6 +135,7 @@
 
 - (void)startGameWithTime:(ClockTime *) time
 {
+  self.currentPlayerClock = nil;
   self.playerClockOne = [PlayerClock clockWithTime:time];
   self.playerClockTwo = [PlayerClock clockWithTime:time];
   [self updateClockDisplay];
