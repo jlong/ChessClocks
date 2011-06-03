@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B65667A51399823D0043C5CB /* Icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = B65667A21399823D0043C5CB /* Icon-512.png */; };
+		B65667A61399823D0043C5CB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B65667A31399823D0043C5CB /* Icon.png */; };
+		B65667A71399823D0043C5CB /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B65667A41399823D0043C5CB /* Icon@2x.png */; };
+		B65667AA139983DF0043C5CB /* start-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = B65667A9139983DF0043C5CB /* start-screen.png */; };
 		B697A86C13636112001DB713 /* clock-background-active.png in Resources */ = {isa = PBXBuildFile; fileRef = B697A86413636112001DB713 /* clock-background-active.png */; };
 		B697A86D13636112001DB713 /* clock-background-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B697A86513636112001DB713 /* clock-background-active@2x.png */; };
 		B697A86E13636112001DB713 /* clock-background.png in Resources */ = {isa = PBXBuildFile; fileRef = B697A86613636112001DB713 /* clock-background.png */; };
@@ -44,6 +48,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B65667A21399823D0043C5CB /* Icon-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-512.png"; sourceTree = "<group>"; };
+		B65667A31399823D0043C5CB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		B65667A41399823D0043C5CB /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		B65667A9139983DF0043C5CB /* start-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start-screen.png"; sourceTree = "<group>"; };
 		B697A86413636112001DB713 /* clock-background-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-background-active.png"; sourceTree = "<group>"; };
 		B697A86513636112001DB713 /* clock-background-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-background-active@2x.png"; sourceTree = "<group>"; };
 		B697A86613636112001DB713 /* clock-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-background.png"; sourceTree = "<group>"; };
@@ -117,10 +125,14 @@
 		B697A87513636746001DB713 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B65667A9139983DF0043C5CB /* start-screen.png */,
 				B697A86413636112001DB713 /* clock-background-active.png */,
 				B697A86513636112001DB713 /* clock-background-active@2x.png */,
 				B697A86613636112001DB713 /* clock-background.png */,
 				B697A86713636112001DB713 /* clock-background@2x.png */,
+				B65667A21399823D0043C5CB /* Icon-512.png */,
+				B65667A31399823D0043C5CB /* Icon.png */,
+				B65667A41399823D0043C5CB /* Icon@2x.png */,
 				B697A86813636112001DB713 /* glare.png */,
 				B697A86913636112001DB713 /* glare@2x.png */,
 				B697A86A13636112001DB713 /* pause.png */,
@@ -284,6 +296,10 @@
 				B697A87313636112001DB713 /* pause@2x.png in Resources */,
 				B7888666139917A200CEB427 /* Entitlements.plist in Resources */,
 				B788866B13991BFA00CEB427 /* WelcomeViewController.xib in Resources */,
+				B65667A51399823D0043C5CB /* Icon-512.png in Resources */,
+				B65667A61399823D0043C5CB /* Icon.png in Resources */,
+				B65667A71399823D0043C5CB /* Icon@2x.png in Resources */,
+				B65667AA139983DF0043C5CB /* start-screen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
