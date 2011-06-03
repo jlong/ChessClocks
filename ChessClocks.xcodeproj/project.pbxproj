@@ -40,6 +40,7 @@
 		B7CEDAB213995404006D621C /* ATMTextLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CEDAAC13995404006D621C /* ATMTextLayer.m */; };
 		B7CEDAB413995428006D621C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CEDAB313995428006D621C /* QuartzCore.framework */; };
 		B7CEDAB613995433006D621C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CEDAB513995433006D621C /* AudioToolbox.framework */; };
+		B7CEDAB9139961C6006D621C /* ChessGame.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CEDAB8139961C6006D621C /* ChessGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,8 @@
 		B7CEDAAC13995404006D621C /* ATMTextLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMTextLayer.m; sourceTree = "<group>"; };
 		B7CEDAB313995428006D621C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B7CEDAB513995433006D621C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B7CEDAB7139961C6006D621C /* ChessGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChessGame.h; sourceTree = "<group>"; };
+		B7CEDAB8139961C6006D621C /* ChessGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChessGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +183,8 @@
 				B788866713991BFA00CEB427 /* WelcomeViewController.h */,
 				B788866813991BFA00CEB427 /* WelcomeViewController.m */,
 				B788866913991BFA00CEB427 /* WelcomeViewController.xib */,
+				B7CEDAB7139961C6006D621C /* ChessGame.h */,
+				B7CEDAB8139961C6006D621C /* ChessGame.m */,
 			);
 			path = ChessClocks;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 				B7CEDAB013995404006D621C /* ATMProgressLayer.m in Sources */,
 				B7CEDAB113995404006D621C /* ATMSoundFX.m in Sources */,
 				B7CEDAB213995404006D621C /* ATMTextLayer.m in Sources */,
+				B7CEDAB9139961C6006D621C /* ChessGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

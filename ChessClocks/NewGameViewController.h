@@ -1,3 +1,4 @@
+#import "ChessGame.h"
 #import "TimePickerController.h"
 
 @class NewGameViewController;
@@ -5,7 +6,7 @@
 @protocol NewGameViewControllerDelegate <NSObject>
 
 - (void)newGameViewControllerDidCancel:(NewGameViewController *)newGameViewController;
-- (void)newGameViewController:(NewGameViewController *)newGameViewController didStart:(ClockTime *)clockTime;
+- (void)newGameViewController:(NewGameViewController *)newGameViewController didCreateGame:(ChessGame *)game;
 
 @end
 

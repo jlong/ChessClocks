@@ -18,7 +18,8 @@
 }
 
 - (IBAction) startNewGame:(id)sender {
-  [delegate newGameViewController:self didStart:self.clockTime];
+  ChessGame *game = [[[ChessGame alloc] initWithTime:self.clockTime] autorelease];
+  [delegate newGameViewController:self didCreateGame:game];
 }
 
 - (void) viewDidLoad {

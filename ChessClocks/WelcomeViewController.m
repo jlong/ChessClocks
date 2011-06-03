@@ -1,12 +1,12 @@
 #import "WelcomeViewController.h"
+#import "ChessClocksAppDelegate.h"
 
 @implementation WelcomeViewController
 
-@synthesize delegate=_delegate;
-
 - (IBAction)newGame:(id)sender
 {
-  [self.delegate welcomeViewControllerNewGame:self];
+  ChessClocksAppDelegate *appDelegate = (ChessClocksAppDelegate*) [[UIApplication sharedApplication] delegate];
+  [appDelegate newGame];
 }
 
 @end
