@@ -26,9 +26,8 @@
 @synthesize playerOneBackgroundImage, playerTwoBackgroundImage;
 
 
-//
-// Pause Game
-//
+#pragma mark
+#pragma mark Pause Game
 
 - (IBAction)pauseGame:(id) sender {
   [self stopClocks];
@@ -53,9 +52,8 @@
 }
 
 
-//
-// New Game
-//
+#pragma mark
+#pragma mark New Game
 
 - (void)showNewGameView {
   [[UIApplication sharedApplication]setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
@@ -81,10 +79,8 @@
 }
 
 
-
-//
-// Game
-//
+#pragma mark
+#pragma mark Game
 
 - (void)setCurrentPlayerClock:(PlayerClock *)clock {
   static NSString *keyPath = @"clockTime";
