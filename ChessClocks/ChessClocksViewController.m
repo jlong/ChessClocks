@@ -2,17 +2,18 @@
 #import "ChessClocksViewController.h"
 #import "NewGameViewController.h"
 #import "PlayerClock.h"
+#import "ATMHud.h"
 
 @interface ChessClocksViewController()
 
 @property (nonatomic, retain) PlayerClock *playerClockOne;
 @property (nonatomic, retain) PlayerClock *playerClockTwo;
 @property (nonatomic, retain) PlayerClock *currentPlayerClock;
-@property (nonatomic, assign) UILabel *overlayMessageLabel;
 
 - (void)showPauseGameActionSheet;
 - (void)showNewGameView;
 - (void)hideNewGameView;
+- (void)startGame;
 - (void)startClocks;
 - (void)stopClocks;
 - (void)updateClockDisplay;
@@ -25,27 +26,24 @@
 @synthesize playerClockOne, playerClockTwo, currentPlayerClock;
 @synthesize playerOneTimeLabel, playerTwoTimeLabel;
 @synthesize playerOneBackgroundImage, playerTwoBackgroundImage;
-@synthesize overlayMessageLabel;
-
 
 #pragma mark
 #pragma mark Overlay
 
-- (void) showOverlayMessage:(NSString *)message
+- (void) showStartMessage:(NSString *)message
 {
-  self.overlayMessageLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 200, 280, 100)];
-  self.overlayMessageLabel.text = message;
-  self.overlayMessageLabel.numberOfLines = 2;
-  [[self.view window] insertSubview:self.overlayMessageLabel aboveSubview:self.view];  
+  ATMHud *hud = [[ATMHud alloc] initWithDelegate:self];
+  [self.view addSubview:hud.view];
+  [hud release];
+  [hud setCaption:message];
+  [hud show];
 }
 
-
-- (void) hideOverlayMessage
+- (void)userDidTapHud:(ATMHud *)_hud
 {
-  [self.overlayMessageLabel removeFromSuperview];
-  self.overlayMessageLabel = nil;
+  [_hud hide];
+  [self startGame];
 }
-
 
 #pragma mark
 #pragma mark Pause Game
@@ -110,11 +108,6 @@
 #pragma mark
 #pragma mark Game
 
-- (BOOL)isGameStarted
-{
-  return self.overlayMessageLabel == nil;
-}
-
 - (void)setCurrentPlayerClock:(PlayerClock *)clock
 {
   static NSString *keyPath = @"clockTime";
@@ -134,7 +127,6 @@
 
 - (void)startGame
 {
-  [self hideOverlayMessage];
   self.currentPlayerClock = playerClockOne;
   [self startClocks];
 }
@@ -144,7 +136,7 @@
   self.playerClockOne = [PlayerClock clockWithTime:time];
   self.playerClockTwo = [PlayerClock clockWithTime:time];
   [self updateClockDisplay];
-  [self showOverlayMessage: @"Tap anywhere to start.\nTap again to switch clocks."];
+  [self showStartMessage: @"Tap anywhere to start.\nTap again to switch clocks."];
 }
 
 - (void)updateClockDisplay
@@ -181,11 +173,7 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-  if ([self isGameStarted]) {
-    [self toggleCurrentPlayerClock];
-  } else {
-    [self startGame];
-  }
+  [self toggleCurrentPlayerClock];
 }
 
 @end

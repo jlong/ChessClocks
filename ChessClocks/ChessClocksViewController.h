@@ -1,6 +1,8 @@
 #import "NewGameViewController.h"
 
-@interface ChessClocksViewController : UIViewController <UIActionSheetDelegate, NewGameViewControllerDelegate> {
+#import "ATMHudDelegate.h"
+
+@interface ChessClocksViewController : UIViewController <ATMHudDelegate, UIActionSheetDelegate, NewGameViewControllerDelegate> {
 
 }
 
