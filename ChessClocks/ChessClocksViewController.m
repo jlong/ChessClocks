@@ -132,13 +132,18 @@
   [currentPlayerClock addObserver:self forKeyPath:keyPath options:0 context:nil];
 }
 
+- (void)startGame
+{
+  [self hideOverlayMessage];
+  self.currentPlayerClock = playerClockOne;
+  [self startClocks];
+}
+
 - (void)startGameWithTime:(ClockTime *) time
 {
   self.playerClockOne = [PlayerClock clockWithTime:time];
   self.playerClockTwo = [PlayerClock clockWithTime:time];
-  
   [self updateClockDisplay];
-
   [self showOverlayMessage: @"Tap anywhere to start.\nTap again to switch clocks."];
 }
 
@@ -179,9 +184,7 @@
   if ([self isGameStarted]) {
     [self toggleCurrentPlayerClock];
   } else {
-    [self hideOverlayMessage];
-    self.currentPlayerClock = playerClockOne;
-    [self startClocks];
+    [self startGame];
   }
 }
 
